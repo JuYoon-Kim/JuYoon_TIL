@@ -32,12 +32,12 @@ int main(void)
 				printf("1부터 10사이의 숫자를 입력하세요: \n");
 				continue;
 			}
-			if (seats[ans2 - 1] == 0) // 예약되지 않았으면
+			if (seats[ans2 - 1] == 0)			// 예약되지 않았으면
 			{
 				seats[ans2 - 1] = 1;
 				printf("예약되었습니다.\n");
 			}
-			else // 이미 예약되었으면
+			else								// 이미 예약되었으면
 				printf("이미 예약된 자리입니다.\n");
 		}
 
@@ -55,17 +55,17 @@ int main(void)
 			printf("몇번째 좌석을 취소하시겠습니까: ");
 			scanf_s("%d", &ans2);
 
-			if (ans2 <= 0 || ans2 > SIZE)
+			if (ans2 <= 0 || ans2 > SIZE)		//취소 하고 싶은자리
 			{
 				printf("1부터 10사이의 숫자를 입력하세요\n");
 				continue;
 			}
-			if (seats[ans2 - 1] != 0)
+			if (seats[ans2 - 1] != 0)			
 			{
 				seats[ans2 - 1] = 0;
 				printf("예약취소 되었습니다.\n");
 			}
-			else
+			else                                //빈자리
 				printf("빈 자리입니다.\n");
 		}
 		else if (ans1 == 'n')
