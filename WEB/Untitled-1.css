@@ -1,0 +1,26 @@
+.ime{
+    height: 50px; width: 50px;
+}
+
+.navbar
+{
+    background-color: gray; 
+    height:50px;
+    width: 100%;
+}
+
+
+.asd{
+    display: block;
+    font-size: 20px;
+}
+
+.asdf{
+    position: relative;
+    bottom: 20px;
+    display: inline-block;
+}
+.asdfg{
+    position: relative;
+    display: inline-block;
+}
