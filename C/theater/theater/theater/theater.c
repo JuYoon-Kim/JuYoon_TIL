@@ -4,8 +4,8 @@
 int main(void)
 {
 	char ans1;
-	int ans2, i;
-	int seats[SIZE] = { 0 };
+	int ans2, i, j;
+	int seats[SIZE][SIZE] = { 0 };
 
 	while (1)
 	{
@@ -16,12 +16,23 @@ int main(void)
 		if (ans1 == 'y')
 		{
 			printf("-------------------------------\n");
-			printf(" 1 2 3 4 5 6 7 8 9 10\n");
+			for (i = 0; i < 10; i++)
+			{
+				for (j = 1; j <= 10; j++)
+				{
+					printf("%d ", i * j + j);
+				}
+				printf("\n");
+			}
 			printf("-------------------------------\n");
 
 			for (i = 0; i < SIZE; i++)
 			{
-				printf(" %d", seats[i]);
+				for (j = 0; j < SIZE; j++)
+				{
+					printf(" %d", seats[i][j]);
+				}
+				printf("\n");
 			}
 			printf("\n");
 			printf("몇번째 좌석을 예약하시겠습니까: ");
@@ -60,12 +71,12 @@ int main(void)
 				printf("1부터 10사이의 숫자를 입력하세요\n");
 				continue;
 			}
-			if (seats[ans2 - 1] != 0)
+			if (seats[ans2 - 1] != 0) // 이미 예약되었으면
 			{
 				seats[ans2 - 1] = 0;
 				printf("예약취소 되었습니다.\n");
 			}
-			else
+			else  // 예약되지 않았으면
 				printf("빈 자리입니다.\n");
 		}
 		else if (ans1 == 'n')
