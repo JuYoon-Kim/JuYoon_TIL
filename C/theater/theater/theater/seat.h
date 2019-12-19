@@ -7,7 +7,7 @@ void seat();
 
 void seat()
 {
-	char ans1;					//예약 예약취소 종료
+	char ans1;						//예약 예약취소 종료
 	char ans2, ans3, i, j;			// ans2: 열 고르기 ans3: 행 고르기
 	int seats[SIZE][SIZE] = { 0 };
 
@@ -55,6 +55,7 @@ void seat()
 					}
 					else										// 이미 예약되었으면
 						printf("이미 예약된 자리입니다.\n");
+
 					for (i = 0; i < SIZE; i++)
 					{
 						printf("%2d) ", i + 1);
@@ -110,6 +111,7 @@ void seat()
 					}
 					else										// 이미 예약되었으면
 						printf("없는 자리입니다.\n");
+
 					for (i = 0; i < SIZE; i++)
 					{
 						printf("%2d) ", i + 1);
@@ -127,7 +129,6 @@ void seat()
 				printf("1부터 10 사이의 숫자를 입력해주세요 \n");
 		}
 		else if (ans1 == 'n')
-			return 0;
+			break;
 	}
-
 }
